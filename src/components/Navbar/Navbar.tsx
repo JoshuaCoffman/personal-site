@@ -5,17 +5,18 @@ import './Navbar.css';
 function Navbar() {
     let navigate = useNavigate();
     const [expanded, setExpanded] = useState(true);
+    const isExpanded = `navButton ${expanded ? "expanded" : ""}`;
     return (
-        <div className={`navbar ${expanded ? "expanded" : ""}`}>
-            <button onClick={() => setExpanded(!expanded)}>
+        <div className="navbar">
+            <button className={isExpanded} onClick={() => setExpanded(!expanded)}>
                 |||
             </button>
 
-            <button onClick={() => navigate('/')}>
+            <button className={isExpanded} onClick={() => navigate('/')}>
                 {expanded ? "Home" : "H"}
             </button>
 
-            <button onClick={() => navigate('/projects')}>
+            <button className={isExpanded} onClick={() => navigate('/projects')}>
                 {expanded ? "Projects" : "P"}
             </button>
         </div>

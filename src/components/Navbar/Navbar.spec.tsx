@@ -1,17 +1,21 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Navbar from './Navbar';
 
 describe('Navbar', () => {
 
     it('should expand when the hamburger is clicked', () => {
-        render(<Navbar />);
+        render(<BrowserRouter> <Navbar /> </BrowserRouter>);
         const expandButton = screen.getByText('|||');
-        
-        fireEvent.click(expandButton);
 
         const expandedHomeButton = screen.queryByText('Home');
 
         expect(expandedHomeButton).toBeInTheDocument();
+
+        fireEvent.click(expandButton);
+
+        const collapsedHomeButton = screen.queryByText('H');
+
+        expect(collapsedHomeButton).toBeInTheDocument();
     })
-    })
+})
