@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    width: 2.5em;
+    height: 100%;
+    position: fixed;
+    transition: width .5s ease-in-out;
+}
+
+.expanded {
+    transition: width .5s ease-in-out;
+    width: 7.5em;
+}

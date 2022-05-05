@@ -1,0 +1,23 @@
+.projectDisplay {
+    display: flex;
+    flex-direction: column;
+    background-color: #393f4a;
+    width: 64rem;
+    padding: 0rem 2rem 2rem 2rem;
+    margin: 2rem;
+}
+
+.title {
+    align-self: flex-start;
+}
+
+.description {
+    align-self: flex-start;
+
+}
+
+.screenshot {
+    align-self: flex-start;
+    width: 100%;
+
+}
