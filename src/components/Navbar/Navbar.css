@@ -4,12 +4,18 @@
     z-index: 10000;
     width: 100%;
     position: fixed;
+    background-color: black;
 }
 
 .navButton {
     width: 2rem;
     transition: width .5s ease-in-out;
-
+    height: 2rem;
+    margin-left: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
 }
 
 .expanded {

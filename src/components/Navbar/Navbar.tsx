@@ -1,5 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import homeIcon from '../../Images/home-alt.svg';
+import expand from '../../Images/maximize-alt.svg';
+import collapse from '../../Images/minimize.svg';
+import work from '../../Images/work-alt.svg';
+
+
 import './Navbar.css';
 
 function Navbar() {
@@ -8,16 +14,16 @@ function Navbar() {
     const isExpanded = `navButton ${expanded ? "expanded" : ""}`;
     return (
         <div className="navbar">
-            <button className={isExpanded} onClick={() => setExpanded(!expanded)}>
-                |||
+            <button className='navButton' onClick={() => setExpanded(!expanded)}>
+                {expanded ? <img src={collapse} /> : <img src={expand} />}
             </button>
 
             <button className={isExpanded} onClick={() => navigate('/')}>
-                {expanded ? "Home" : "H"}
+                {expanded ? "Home" : <img src={homeIcon} />}
             </button>
 
             <button className={isExpanded} onClick={() => navigate('/projects')}>
-                {expanded ? "Projects" : "P"}
+                {expanded ? "Projects" : <img src={work} />}
             </button>
         </div>
     )
