@@ -14,7 +14,7 @@ function Navbar() {
     const isExpanded = `navButton ${expanded ? "expanded" : ""}`;
     return (
         <div className="navbar">
-            <button className='navButton' onClick={() => setExpanded(!expanded)}>
+            <button className='navButton' onClick={() => setExpanded(!expanded)} data-testid="expandCollapseButton">
                 {expanded ? <img src={collapse} /> : <img src={expand} />}
             </button>
 
@@ -24,6 +24,10 @@ function Navbar() {
 
             <button className={isExpanded} onClick={() => navigate('/projects')}>
                 {expanded ? "Projects" : <img src={work} />}
+            </button>
+
+            <button className={isExpanded} onClick={() => navigate('/datascience')}>
+                {expanded ? "Data Science" : <img src={work} />}
             </button>
         </div>
     )

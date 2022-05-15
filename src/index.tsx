@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './views/Projects/Projects';
+import DataScienceView from './views/DataScience/DataScience';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,6 +19,8 @@ root.render(
         <Route path='' element={<App />} />
         <Route path='/' element={<App />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/datascience' element={<DataScienceView />} />
+
       </Routes>
 
     </BrowserRouter>
